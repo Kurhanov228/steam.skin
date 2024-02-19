@@ -19,11 +19,6 @@ while True:
     for item_nameide, cena in ID_ITEMS.items():
         aktual = tuke_prise(item_nameide,session)
         if aktual <= cena:
-            while True:
-                try:
-                    message  = f'Проснись, скин пора купить{item_nameide}'
-                    message_send(token, message + item_nameide ,chat_id)
-                    break
-                except:
-                    time.sleep(DILEY2)
+            message  = f'Проснись, скин пора купить{item_nameide}'
+            message_send(token, message + item_nameide ,chat_id)
         time.sleep(DILEY)
